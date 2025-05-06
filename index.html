@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
-    <link href="./styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Hello World!</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+  <body class="container-fluid">
+    <div class="col justify-content-center">
+      <div class="text-center mb-3">
+        <button class="btn btn-primary mb-2">Temperatura</button>
+        <button class="btn btn-primary mb-2">Batimentos</button>
+        <button class="btn btn-primary mb-2">Oximetria</button>
+        <button class="btn btn-primary mb-2">Salvar Dados</button>
+        <button class="btn btn-primary mb-2">Ajuda</button>
+        <button class="btn btn-primary mb-2">Fechar</button>
+      </div>
+      
+      <div class="w-50 justify-content-center">
+        <canvas class="border border-black rounded-md" id="plot"></canvas>        
+      </div>      
+    </div>
+    
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <script src="uart3.js"></script>    
   </body>
 </html>

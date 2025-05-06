@@ -18,5 +18,11 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^35.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.5",
+    "chart.js": "^4.4.9",
+    "chartjs": "^0.3.24",
+    "serialport": "^13.0.0"
   }
 }
