@@ -1,4 +1,3 @@
-import Chart from 'chart.js';
 
 const { SerialPort, ReadlineParser }= require('serialport')
 const port = new SerialPort({path:'COM3',baudRate: 19200})
@@ -21,16 +20,16 @@ const dados_temp = {
     }
 };
 
-const grafico_temp = new Chart(document.getElementById('plot_temp'),dados_temp);
+const grafico_temp = new Chart(document.getElementById('plot'),dados_temp);
 
 parser.on('data', (line) =>
 {
     var dado_recebido = line.split(':');
     console.log(dado_recebido[0],dado_recebido[1]);    
 
-    grafico_temp.data.labels.push(x);
-    grafico_temp.data.datasets[0].data.push(y);
-    grafico_temp.update();
+    // grafico_temp.data.labels.push(x);
+    // grafico_temp.data.datasets[0].data.push(y);
+    // grafico_temp.update();
     
 
 

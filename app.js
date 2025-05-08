@@ -4,6 +4,7 @@ const app = express();
 
 // Serve arquivos da raiz do projeto, incluindo chart.min.js
 app.use(express.static(path.join(__dirname))); 
+app.use('/chart.js', express.static(__dirname + '/node_modules/chart.js/dist'));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
