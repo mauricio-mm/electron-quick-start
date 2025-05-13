@@ -9,16 +9,21 @@
   <body class="container-fluid">
     <div class="col justify-content-center">
       <div class="text-center mb-3">
-        <button class="btn btn-primary mb-2">Temperatura</button>
-        <button class="btn btn-primary mb-2">Batimentos</button>
-        <button class="btn btn-primary mb-2">Oximetria</button>
+        <button onclick="graph_temp()" class="btn btn-primary mb-2">Temperatura</button>
+        <button onclick="graph_bat()" class="btn btn-primary mb-2">Batimentos</button>
+        <button onclick="graph_ox()" class="btn btn-primary mb-2">Oximetria</button>
         <button class="btn btn-primary mb-2">Salvar Dados</button>
-        <button class="btn btn-primary mb-2">Ajuda</button>
+        <button onclick="alert('Documentacao no github')" class="btn btn-primary mb-2">Ajuda</button>
         <button class="btn btn-primary mb-2">Fechar</button>
       </div>
       
-      <div class="w-50 justify-content-center">
-        <canvas class="border border-black rounded-md" id="plot"></canvas>        
+      <div class="col w-50">
+        <div>
+          <canvas class="border border-black rounded-md" id="plot_1"></canvas>        
+        </div>
+        <div>
+          <canvas class="border border-black rounded-md" id="plot_2"></canvas>        
+        </div>
       </div>      
     </div>
     
