@@ -10,19 +10,18 @@
     <div class="col justify-content-center">
       <div class="text-center mb-3">
         <button onclick="graph_temp()" class="btn btn-primary mb-2">Temperatura</button>
-        <button onclick="graph_bat()" class="btn btn-primary mb-2">Batimentos</button>
-        <button onclick="graph_ox()" class="btn btn-primary mb-2">Oximetria</button>
-        <button class="btn btn-primary mb-2">Salvar Dados</button>
+        <button onclick="graph_max()" class="btn btn-primary mb-2">Batimentos/Oximetria</button>        
+        <button onclick="save_data()" class="btn btn-primary mb-2">Salvar Dados</button>
         <button onclick="alert('Documentacao no github')" class="btn btn-primary mb-2">Ajuda</button>
         <button class="btn btn-primary mb-2">Fechar</button>
       </div>
       
-      <div class="col w-50">
-        <div>
-          <canvas class="border border-black rounded-md" id="plot_1"></canvas>        
+      <div class="col">
+        <div class="my-2">
+          <canvas class="border border-black rounded-md w-50" id="plot_1" style="margin: auto; display: block;"></canvas>        
         </div>
         <div>
-          <canvas class="border border-black rounded-md" id="plot_2"></canvas>        
+          <canvas class="border border-black rounded-md w-50" id="plot_2" style="margin: auto; display: block;"></canvas>        
         </div>
       </div>      
     </div>
