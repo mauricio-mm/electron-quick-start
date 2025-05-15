@@ -66,8 +66,13 @@ parser.on('data', (line) =>
     grafico_temp.update();
     grafico_max.update();
     
-    // if(save_data != false)
-    //     fs.appendfile("data.txt",data[0], data[1], data[2], data[3], '\n');
+    if(save_data != false)
+    {
+        fs.appendFile("data.txt", `${data[0]},${data[1]},${data[2]},${data[3]}\n`, (err) => {
+            if (err) console.error("Erro ao salvar os dados:", err);
+        });        
+    }
+    
 
 });   
 
