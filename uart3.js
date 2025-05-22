@@ -47,7 +47,6 @@ const data_max = {
     }
 };
 
-
 const grafico_temp = new Chart(plot_1, dados_temp);
 const grafico_max  = new Chart(plot_2, data_max);
    
